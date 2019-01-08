@@ -1,0 +1,166 @@
+html {}
+
+* {
+    transition: all 0.5s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.container-grid {
+    display: grid;
+    width: 1200px;
+    background: red;
+    min-height: 100px;
+    margin: auto;
+}
+
+.bialyPasek {
+    min-height: 120px;
+    width: 100%;
+    background: #fff;
+}
+
+.bluePasek {
+    min-height: 90px;
+    width: 100%;
+    background: #00b0ef;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/************    top    *************/
+
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+}
+
+.kon {
+    display: grid;
+    width: 1200px;
+    margin: auto;
+
+    grid-template-columns: 30% 50% 20%;
+    grid-template-row: 100px;
+}
+
+.adres {
+    display: flex;
+    align-items: center;
+    color: #00b0ef;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.tele {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tele button {
+    display: block;
+    background: none;
+    color: #00b0ef;
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid #f8941b;
+    padding: 0.15rem;
+    border-radius: 6px;
+}
+
+button img {
+    vertical-align: middle;
+    margin-right: 2rem;
+}
+
+/**/
+
+.linki {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+}
+
+.linki ul {
+    padding: 0;
+}
+
+.linki li {
+    display: inline;
+}
+
+.linki a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 1rem
+}
+
+.linki a:focus,
+.linki a:hover {
+    color: #000;
+}
+
+/************** Mobile *************/
+
+@media (max-width: 1200px) {
+    .kon {
+        width: 100%;
+        margin: auto;
+        grid-template-columns: 40% 34% 25%;
+        grid-template-row: 100px;
+    }
+    .linki a {
+        font-size: 18px;
+        padding: 0.7rem;
+    }
+}
+
+@media (max-width: 1120px) {
+    .kon {
+        width: 100%;
+        margin: auto;
+    }
+    .obrazekFull {
+        display: block;
+        width: 275px;
+        margin: auto
+    }
+    .logo {
+        grid-area: 1 / span 3;
+    }
+    .adres {
+        background: red;
+        justify-content: center;
+    }
+    .tele {
+        flex-wrap: nowrap;
+    }
+
+    .tele button {
+        display: block;
+        background: none;
+        color: #00b0ef;
+        width: 100%;
+        font-size: 16px;
+        border: 2px solid #f8941b;
+        padding: 0.15rem;
+        border-radius: 6px;
+    }
+
+}
